@@ -1,5 +1,7 @@
 # Fallout-76-Countdown
 
+This is a little countdown timer that I coded, to countdown to the release date of Bethesda Game Studios new MMORPG *Fallout 76*.
+
 ## Compiling
 
 ### Windows - MinGW
