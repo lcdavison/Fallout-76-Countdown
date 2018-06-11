@@ -40,9 +40,9 @@ void Update()
 	total_seconds = std::fmod(total_seconds, 3600);
 	float minutes = total_seconds / 60;
 
-	text = "MONTHS : " + std::to_string(static_cast<int>(std::floor(months))) + "\n" + "DAYS : " + std::to_string(static_cast<int>(std::floor(days))) + "\n" + "HOURS : " + std::to_string(static_cast<int>(std::ceil(hours))) + "\n" + "MINUTES : " + std::to_string(static_cast<int>(std::ceil(minutes)));
+	text = "MONTHS : " + std::to_string(static_cast<int>(std::floor(months))) + "\n" + "DAYS : " + std::to_string(static_cast<int>(std::floor(days))) + "\n" + "HOURS : " + std::to_string(static_cast<int>(std::floor(hours))) + "\n" + "MINUTES : " + std::to_string(static_cast<int>(std::ceil(minutes)));
 
-	printf("MONTHS : %2.f DAYS : %2.f HOURS : %2.f MINUTES : %2.f\n", std::floor(months), std::floor(days), hours, minutes);
+	printf("MONTHS : %2.f DAYS : %2.f HOURS : %2.f MINUTES : %2.f\n", std::floor(months), std::floor(days), std::floor(hours), std::ceil(minutes));
 }
 
 int main(int argc, char* argv[]) 

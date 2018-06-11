@@ -12,14 +12,14 @@ void EventHandler::HandleEvents()
 {
 	SDL_Event event;
 
-	while ( SDL_PollEvent ( &event ) ) 
+	if ( !SDL_WaitEvent ( &event ) ) 
+		return; 
+
+	switch ( event.type ) 
 	{
-		switch ( event.type ) 
-		{
-			case SDL_QUIT:
-				SDL_Quit();
-				exit(EXIT_SUCCESS);
-				break;
-		}
+		case SDL_QUIT:
+			SDL_Quit();
+			exit(EXIT_SUCCESS);
+			break;
 	}
 }
