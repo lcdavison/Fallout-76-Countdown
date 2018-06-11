@@ -1,4 +1,5 @@
 #include "event_handler.h"
+#include <iostream>
 
 EventHandler::EventHandler() 
 {
@@ -12,14 +13,12 @@ void EventHandler::HandleEvents()
 {
 	SDL_Event event;
 
-	if ( !SDL_WaitEvent ( &event ) ) 
-		return; 
+	SDL_WaitEventTimeout ( &event, 500 );
 
-	switch ( event.type ) 
-	{
-		case SDL_QUIT:
-			SDL_Quit();
-			exit(EXIT_SUCCESS);
-			break;
-	}
+	if ( event.type != SDL_QUIT )
+		return;
+
+	SDL_Quit();
+	exit(EXIT_SUCCESS);
+
 }
