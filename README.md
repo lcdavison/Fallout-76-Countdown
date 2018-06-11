@@ -5,7 +5,13 @@
 ### Windows - MinGW
 
 ```shell
-g++ -o f76countdown.exe source/*.cpp -I (Location to MinGW32 includes folder) -L (Location to MinGW32 lib folder) -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
+g++ -o f76countdown.exe source/*.cpp -I (Location to MinGW32 includes folder) -L (Location to MinGW32 lib folder) -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf 
+```
+
+### Linux
+
+```bash
+g++ -o f76countdown source/*.cpp -I /usr/include/SDL2 -lSDL2 -lSDL2_image -lSDL2_ttf 
 ```
 
 ## To Run
