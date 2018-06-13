@@ -1,0 +1,13 @@
+language:
+  - cpp
+before_install:
+  - sudo add-apt-repository -y ppa:team-xbmc/ppa
+  - sudo update -qq
+  - sudo apt-get install -y libegl1-mesa-dev
+  - sudo apt-get install -y libgles2-mesa-dev
+  - sudo apt-get install -y libsdl2-dev
+  - sudo apt-get install -y libsdl2-image-dev
+  - sudo apt-get install -y libsdl2-ttf-dev
+  
+script:
+  - g++ -o f76countdown source/*.cpp -I /usr/include/SDL2 -lSDL2 -lSDL2_image -lSDL2_ttf
